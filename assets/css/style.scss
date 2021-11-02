@@ -50,6 +50,7 @@
 $color1: #074000;
 $color2: #2db000;
 $color3: #44b81c;
+$color4: #a9df00;
 // VARIABLES END
 
 // GLOBAL START
@@ -182,6 +183,10 @@ html {
 	font-weight: 900;
 }
 
+.bottom_line {
+	border-bottom: 4px solid #aae000;
+}
+
 // COLORS
 .color1 {
 	color: $color1;
@@ -195,10 +200,22 @@ html {
 	color: $color3;
 }
 
+.color4 {
+	color: $color4;
+}
+
 .page_container {
-	max-width: 1100px;
+	max-width: 1200px;
 	margin-left: auto;
 	margin-right: auto;
+}
+
+.page_container2 {
+	max-width: 1000px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 8rem;
+	margin-bottom: 4rem;
 }
 
 // HEADER START
@@ -209,6 +226,10 @@ html {
 	background-color: #fff;
 	height: 80px;
 	width: 100%;
+	position: fixed;
+	top: 0%;
+	left: 0%;
+	z-index: 2;
 
 	.logo_container {
 		img {
@@ -242,9 +263,197 @@ html {
 					color: $color2;
 					text-decoration: none;
 					font-weight: 600;
+
+					&:focus {
+						outline: none;
+					}
 				}
 			}
 		}
 	}
 }
 // HEADER END
+
+.body_bg {
+	background-image: url("../images/body_bg.svg");
+	background-position: center;
+	background-repeat: no-repeat;
+	width: 100%;
+	height: 100%;
+	background-size: cover;
+}
+
+.body_bg2 {
+	background-image: url("../images/bg2.svg");
+	background-position: center;
+	background-repeat: no-repeat;
+	width: 100%;
+	height: 100%;
+	background-size: cover;
+}
+
+// HERO START
+.hero_container {
+	background-image: url("../images/hero.svg");
+	width: 100%;
+	height: 122vh;
+	background-position: center;
+	background-repeat: no-repeat;
+
+	.inner_hero {
+		margin-top: -5rem;
+	}
+
+	.hero_img_container {
+		max-width: 600px;
+		width: 100%;
+	}
+
+	button {
+		color: #fff;
+		background-color: $color1;
+		border: 2px solid #fff;
+		padding: 0.6rem 2.2rem;
+	}
+}
+// HERO END
+
+// ABOUT START
+.about_container {
+	margin-top: -10rem;
+
+	.inner_about_container {
+		background: #fff;
+		box-shadow: 1px 1px 20px rgb(228, 228, 228);
+	}
+}
+// ABOUT END
+
+// SCHEDULE START
+.sch_container {
+	button {
+		background: transparent;
+		border: 2px solid $color1;
+	}
+}
+// SCHEDULE END
+
+// ABOUT BELOW START
+.about_below_container {
+	.about1 {
+		background-image: url("../images/about_below/i1.svg");
+		height: 300px;
+		width: 100%;
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-position: center;
+		position: relative;
+
+		&::before {
+			content: "";
+			position: absolute;
+			height: 100%;
+			width: 100%;
+			background-color: #ace00093;
+		}
+
+		img {
+			max-width: 120px;
+			width: 100%;
+			z-index: 1;
+		}
+
+		h2 {
+			z-index: 1;
+		}
+	}
+
+	.about2 {
+		background-image: url("../images/about_below/i2.svg");
+		height: 300px;
+		width: 100%;
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-position: center;
+		position: relative;
+
+		&::before {
+			content: "";
+			position: absolute;
+			height: 100%;
+			width: 100%;
+			background-color: #ace00093;
+		}
+
+		img {
+			max-width: 120px;
+			z-index: 1;
+			width: 100%;
+		}
+
+		h2 {
+			z-index: 1;
+		}
+	}
+}
+// ABOUT BELOW END
+
+// CHOOSE START
+.choose_container {
+	.choose_bg {
+		max-width: 800px;
+		margin-left: auto;
+		margin-right: auto;
+		background-color: #fff;
+		box-shadow: 1px 1px 10px #ccc;
+
+		img {
+			max-width: 1000px;
+			width: 100%;
+			margin-top: -1rem;
+		}
+	}
+}
+// CHOOSE END
+
+// FOOTER START
+.footer_container {
+	background-color: $color1;
+
+	.first_footer {
+		img {
+			max-width: 300px;
+			width: 100%;
+		}
+	}
+}
+// FOOTER END
+
+// CONTACT START
+.contact_body_container {
+	.first {
+		color: #fff;
+		background: $color1;
+
+		input {
+			height: 35px;
+			border-radius: 50px;
+			border: none;
+			padding: 0rem 0.8rem;
+
+			&:focus {
+				outline: none;
+			}
+		}
+
+		button {
+			border: 2px solid #fff;
+			background: $color4;
+		}
+	}
+
+	.second {
+		background: #a8de00;
+	}
+}
+// CONTACT END
