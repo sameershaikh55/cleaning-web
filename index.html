@@ -18,6 +18,10 @@
 			crossorigin="anonymous"
 		></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.0/jquery.js"></script>
+		<link
+			rel="stylesheet"
+			href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.0/font/bootstrap-icons.css"
+		/>
 		<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
 		<link rel="stylesheet" href="./assets/css/style.css" />
 		<!-- == EXTERNAL LINKS END == -->
@@ -25,6 +29,51 @@
 		<title>Home</title>
 	</head>
 	<body>
+		<!-- ======== SIDEBAR START ======== -->
+		<div
+			class="w3-sidebar w3-bar-block w3-collapse w3-card w3-animate-left"
+			style="width: 300px"
+			id="mySidebar"
+		>
+			<br />
+			<br />
+			<br />
+			<br />
+			<ul class="d-flex flex-column list-unstyled mb-0 px-3">
+				<li class="py-2">
+					<a class="text-decoration-none color1 fw600" href="index.html"
+						>GET AN INSTANT QUOTE</a
+					>
+				</li>
+				<li class="py-2">
+					<a class="text-decoration-none color1 fw600" href="contact.html"
+						>CONTACT</a
+					>
+				</li>
+				<li class="py-2">
+					<a class="text-decoration-none color1 fw600" href="service.html"
+						>SERVICES</a
+					>
+				</li>
+				<li class="py-2">
+					<a class="text-decoration-none color1 fw600" href="">ABOUT US</a>
+				</li>
+			</ul>
+			<div
+				class="
+					d-flex
+					flex-column
+					align-items-center
+					justify-content-center
+					mt-4
+				"
+			>
+				<img class="avatar" src="./assets/images/avatar.svg" alt="" />
+				<p class="mt-1 mb-0 color3 bold">LOGIN / SIGN IN</p>
+			</div>
+		</div>
+		<!-- ======== SIDEBAR END ======== -->
+
 		<!-- ======== HEADER START ======== -->
 		<div class="header_container shadow">
 			<div class="page_container w-100">
@@ -35,17 +84,30 @@
 								<img src="./assets/images/logo.svg" alt="" />
 							</a>
 						</div>
-						<div class="nav_container">
+						<div class="d-block d-md-none">
+							<i
+								id="hamb"
+								onclick="w3_open()"
+								class="bi bi-list color1 display-3"
+							></i>
+							<i
+								style="display: none"
+								id="cross"
+								onclick="w3_close()"
+								class="bi bi-plus-lg color1 display-3"
+							></i>
+						</div>
+						<div class="nav_container d-none d-md-block">
 							<ul class="d-flex list-unstyled mb-0">
-								<li><a href="">GET AN INSTANT QUOTE</a></li>
-								<li><a href="">CONTACT</a></li>
-								<li><a href="">SERVICES</a></li>
+								<li><a href="index.html">GET AN INSTANT QUOTE</a></li>
+								<li><a href="contact.html">CONTACT</a></li>
+								<li><a href="service.html">SERVICES</a></li>
 								<li><a href="">ABOUT US</a></li>
 							</ul>
 						</div>
 						<div
 							class="
-								d-flex
+								d-none d-md-flex
 								flex-column
 								align-items-center
 								justify-content-center
@@ -98,48 +160,61 @@
 			<!-- ======== ABOUT END ======== -->
 			<div class="about_container">
 				<div class="page_container">
-					<div class="inner_about_container pt-4 pb-5 rounded-pill px-5">
-						<div class="container-fluid">
-							<div class="d-flex justify-content-between">
-								<div class="text-center px-2">
-									<img src="./assets/images/about/i1.svg" alt="" />
-									<h3 class="f16 mt-3 fw700">PROFESSIONAL EQUIPMENT</h3>
-									<p class="mb-0 f12 color2 fw600">
-										Commercial extractors, industrial scrubbers, top of the line
-										cleaning supplies, we bring everything to make sure the job
-										is done right and are dedicated to using eco friendly
-										products.
-									</p>
-								</div>
-								<div class="text-center px-2">
-									<img src="./assets/images/about/i2.svg" alt="" />
-									<h3 class="f16 mt-3 fw700">CERTIFIED CLEANERS</h3>
-									<p class="mb-0 f12 color2 fw600">
-										Our cleaners are all insured and required to go through a
-										background/police check, a phone interview, and a training
-										program, all to guarantee the safety of our clients; and
-										make sure you get a consistent clean every single time.
-									</p>
-								</div>
-								<div class="text-center px-2">
-									<img src="./assets/images/about/i3.svg" alt="" />
-									<h3 class="f16 mt-3 fw700">ONLINE BOOKING & PAYMENT</h3>
-									<p class="mb-0 f12 color2 fw600">
-										Enjoy hassle free online booking and pay using your credit
-										or debit card with our integrated web platform. You can even
-										setup recurring payments so that your house can stay clean
-										all year round, headache free.
-									</p>
-								</div>
-								<div class="text-center px-2">
-									<img src="./assets/images/about/i4.svg" alt="" />
-									<h3 class="f16 mt-3 fw700">CONSISTENT QUALITY</h3>
-									<p class="mb-0 f12 color2 fw600">
-										Our cleaners are trained using a thorough checklist which is
-										also provided to our client at the time of the service, this
-										makes sure that everything, including anything you request,
-										gets done everytime.
-									</p>
+					<div class="container-fluid">
+						<div class="row">
+							<div class="col-11 col-md-12 mx-auto">
+								<div class="inner_about_container pt-4 pb-5 rounded-pill px-5">
+									<div
+										class="
+											d-flex
+											flex-column flex-md-row
+											justify-content-between
+										"
+									>
+										<div class="text-center px-2 mt-5 mt-md-0">
+											<img src="./assets/images/about/i1.svg" alt="" />
+											<h3 class="f16 mt-3 fw700">PROFESSIONAL EQUIPMENT</h3>
+											<p class="mb-0 f12 color2 fw600">
+												Commercial extractors, industrial scrubbers, top of the
+												line cleaning supplies, we bring everything to make sure
+												the job is done right and are dedicated to using eco
+												friendly products.
+											</p>
+										</div>
+										<div class="text-center px-2 mt-5 mt-md-0">
+											<img src="./assets/images/about/i2.svg" alt="" />
+											<h3 class="f16 mt-3 fw700">CERTIFIED CLEANERS</h3>
+											<p class="mb-0 f12 color2 fw600">
+												Our cleaners are all insured and required to go through
+												a background/police check, a phone interview, and a
+												training program, all to guarantee the safety of our
+												clients; and make sure you get a consistent clean every
+												single time.
+											</p>
+										</div>
+										<div class="text-center px-2 mt-5 mt-md-0">
+											<img src="./assets/images/about/i3.svg" alt="" />
+											<h3 class="f16 mt-3 fw700">ONLINE BOOKING & PAYMENT</h3>
+											<p class="mb-0 f12 color2 fw600">
+												Enjoy hassle free online booking and pay using your
+												credit or debit card with our integrated web platform.
+												You can even setup recurring payments so that your house
+												can stay clean all year round, headache free.
+											</p>
+										</div>
+										<div class="text-center px-2 mt-5 mt-md-0">
+											<img src="./assets/images/about/i4.svg" alt="" />
+											<h3 class="f16 mt-3 fw700">CONSISTENT QUALITY</h3>
+											<p class="mb-0 f12 color2 fw600">
+												Our cleaners are trained using a thorough checklist
+												which is also provided to our client at the time of the
+												service, this makes sure that everything, including
+												anything you request, gets done everytime.
+											</p>
+										</div>
+										<br class="d-block d-md-none" />
+										<br class="d-block d-md-none" />
+									</div>
 								</div>
 							</div>
 						</div>
@@ -160,30 +235,34 @@
 			<div class="about_below_container">
 				<div class="page_container">
 					<div class="container-fluid">
-						<div class="d-flex">
-							<div
-								class="
-									about1
-									d-flex
-									flex-column
-									justify-content-center
-									align-items-center
-								"
-							>
-								<img src="./assets/images/about_below/ic2.png" alt="" />
-								<h2 class="text-white mt-2 mb-0 fw700">RESIDENTIAL</h2>
-							</div>
-							<div
-								class="
-									about2
-									d-flex
-									flex-column
-									justify-content-center
-									align-items-center
-								"
-							>
-								<img src="./assets/images/about_below/ic1.svg" alt="" />
-								<h2 class="text-white mt-2 mb-0 fw700">COMMERCIAL</h2>
+						<div class="row">
+							<div class="col-11 col-md-12 mx-auto">
+								<div class="d-flex flex-column flex-md-row">
+									<div
+										class="
+											about1
+											d-flex
+											flex-column
+											justify-content-center
+											align-items-center
+										"
+									>
+										<img src="./assets/images/about_below/ic2.png" alt="" />
+										<h2 class="text-white mt-2 mb-0 fw700">RESIDENTIAL</h2>
+									</div>
+									<div
+										class="
+											about2
+											d-flex
+											flex-column
+											justify-content-center
+											align-items-center
+										"
+									>
+										<img src="./assets/images/about_below/ic1.svg" alt="" />
+										<h2 class="text-white mt-2 mb-0 fw700">COMMERCIAL</h2>
+									</div>
+								</div>
 							</div>
 						</div>
 					</div>
@@ -198,82 +277,127 @@
 						<h2 class="text-center color1 fw700">WHY CHOOSE US?</h2>
 
 						<div class="row">
-							<div class="col-12 mt-5">
-								<div class="choose_bg row align-items-center rounded-pill">
-									<div class="col-3 ps-0">
-										<img
-											class="w-100"
-											src="./assets/images/choose/i1.svg"
-											alt=""
-										/>
+							<div class="col-11 col-md-12 mx-auto">
+								<div class="row">
+									<div class="col-12 mt-5">
+										<div class="choose_bg row align-items-center rounded-pill">
+											<div class="col-12 col-md-3 ps-0 pe-0 pe-md-3">
+												<img
+													class="w-100"
+													src="./assets/images/choose/i1.svg"
+													alt=""
+												/>
+											</div>
+											<div
+												class="
+													col-12 col-md-9
+													pe-4
+													text-center text-md-start
+													second_inner
+												"
+											>
+												<h5 class="color1 fw700">SKIP THE MIDDLEMAN.</h5>
+												<p class="f12 mb-0 color1 fw700 px-2 px-md-1">
+													Did you know that most cleaning and maid services in
+													Calgary outsource their cleaning to third parties?
+													That’s right! If you have ever wondered why the
+													quality of the cleaning you recieve is never
+													consistent, its because there is a good chance there
+													is a different company actually doing the cleaning.
+													Not only do we hire and vet our own cleaners here at
+													GoMaid, we also train them according to our strict
+													cleaning standards. This means that with the exception
+													of acute circumstances, you will likely have the same
+													cleaners every time! No more guess work, you deserve
+													consistency.
+												</p>
+												<div class="d-block d-md-none">
+													<br />
+													<br />
+													<br />
+													<br />
+												</div>
+											</div>
+										</div>
 									</div>
-									<div class="col-9 pe-4">
-										<h5 class="color1 fw700">SKIP THE MIDDLEMAN.</h5>
-										<p class="f12 mb-0 color1 fw700">
-											Did you know that most cleaning and maid services in
-											Calgary outsource their cleaning to third parties? That’s
-											right! If you have ever wondered why the quality of the
-											cleaning you recieve is never consistent, its because
-											there is a good chance there is a different company
-											actually doing the cleaning. Not only do we hire and vet
-											our own cleaners here at GoMaid, we also train them
-											according to our strict cleaning standards. This means
-											that with the exception of acute circumstances, you will
-											likely have the same cleaners every time! No more guess
-											work, you deserve consistency.
-										</p>
+									<div class="col-12 mt-5">
+										<div class="choose_bg row align-items-center rounded-pill">
+											<div class="col-12 col-md-3 ps-0 pe-0 pe-md-3">
+												<img
+													class="w-100"
+													src="./assets/images/choose/i2.svg"
+													alt=""
+												/>
+											</div>
+											<div
+												class="
+													col-12 col-md-9
+													pe-4
+													text-center text-md-start
+													second_inner
+												"
+											>
+												<h5 class="color1 fw700">
+													THOROUGH CHECKLIST. CUSTOMIZED SERVICE
+												</h5>
+												<p class="f12 mb-0 color1 fw700 px-2 px-md-1">
+													All our cleaners are trained using a thorough
+													checklist that they’re required to bring with them to
+													every service. This checklist is then provided to our
+													client after the service is complete. This helps us
+													make sure that our cleaners aren’t cutting any
+													corners, and that our clients are satisfied with their
+													cleaning. If you feel like there was something missing
+													from your cleaning, you can let us know and we will
+													include it on your checklist for next time! We are
+													dedicated to providing our clients with the best
+													possible experience.
+												</p>
+												<div class="d-block d-md-none">
+													<br />
+													<br />
+													<br />
+													<br />
+												</div>
+											</div>
+										</div>
 									</div>
-								</div>
-							</div>
-							<div class="col-12 mt-5">
-								<div class="choose_bg row align-items-center rounded-pill">
-									<div class="col-3 ps-0">
-										<img
-											class="w-100"
-											src="./assets/images/choose/i2.svg"
-											alt=""
-										/>
-									</div>
-									<div class="col-9 pe-4">
-										<h5 class="color1 fw700">
-											THOROUGH CHECKLIST. CUSTOMIZED SERVICE
-										</h5>
-										<p class="f12 mb-0 color1 fw700">
-											All our cleaners are trained using a thorough checklist
-											that they’re required to bring with them to every service.
-											This checklist is then provided to our client after the
-											service is complete. This helps us make sure that our
-											cleaners aren’t cutting any corners, and that our clients
-											are satisfied with their cleaning. If you feel like there
-											was something missing from your cleaning, you can let us
-											know and we will include it on your checklist for next
-											time! We are dedicated to providing our clients with the
-											best possible experience.
-										</p>
-									</div>
-								</div>
-							</div>
-							<div class="col-12 mt-5">
-								<div class="choose_bg row align-items-center rounded-pill">
-									<div class="col-3 ps-0">
-										<img
-											class="w-100"
-											src="./assets/images/choose/i3.svg"
-											alt=""
-										/>
-									</div>
-									<div class="col-9 pe-4">
-										<h5 class="color1 fw700">SAVE TIME. LIVE BETTER.</h5>
-										<p class="f12 mb-0 color1 fw700">
-											Did you know that a cleaner living/work space can make you
-											feel less stressed, be more productive, and studies have
-											shown that a cleaner home boosts your chances of getting a
-											good night’s rest by almost 20%! Everyone wants to enjoy
-											the benefits of a clean home, but not everyone has the
-											time. We know how busy you are, and thats where we come
-											in. We take care of the cleaning, so you can focus on what
-											is most important.
-										</p>
+									<div class="col-12 mt-5">
+										<div class="choose_bg row align-items-center rounded-pill">
+											<div class="col-12 col-md-3 ps-0 pe-0 pe-md-3">
+												<img
+													class="w-100"
+													src="./assets/images/choose/i3.svg"
+													alt=""
+												/>
+											</div>
+											<div
+												class="
+													col-12 col-md-9
+													pe-4
+													text-center text-md-start
+													second_inner
+												"
+											>
+												<h5 class="color1 fw700">SAVE TIME. LIVE BETTER.</h5>
+												<p class="f12 mb-0 color1 fw700 px-2 px-md-1">
+													Did you know that a cleaner living/work space can make
+													you feel less stressed, be more productive, and
+													studies have shown that a cleaner home boosts your
+													chances of getting a good night’s rest by almost 20%!
+													Everyone wants to enjoy the benefits of a clean home,
+													but not everyone has the time. We know how busy you
+													are, and thats where we come in. We take care of the
+													cleaning, so you can focus on what is most important.
+												</p>
+												<div class="d-block d-md-none">
+													<br />
+													<br />
+													<br />
+													<br />
+												</div>
+											</div>
+										</div>
 									</div>
 								</div>
 							</div>
@@ -294,9 +418,22 @@
 				<div class="page_container">
 					<div class="container-fluid">
 						<div class="row">
-							<div class="col-5 first_footer">
+							<div
+								class="col-12 col-md-5 text-center text-md-start first_footer"
+							>
 								<img src="./assets/images/logow.svg" alt="" />
-								<p class="text-white mt-3 w-75 f14 fw700">
+								<p
+									class="
+										text-white
+										mt-3
+										w-75
+										f14
+										fw700
+										text-center text-md-start
+										mx-auto
+										ms-md-0
+									"
+								>
 									Lorem Ipsum is simply dummy text PageMaker including versions
 									of Lorem Ipsum. Lorem Ipsum.
 								</p>
@@ -304,9 +441,9 @@
 									© Copyright 2021 GOMAID, All Right Reserved
 								</p>
 							</div>
-							<div class="col-7">
+							<div class="col-12 col-md-7 mt-5 mt-md-0">
 								<div class="row">
-									<div class="col-4">
+									<div class="col-12 col-md-4">
 										<h5 class="text-white fw800">ABOUT US</h5>
 										<p class="text-white f14 fw700 mb-0">
 											Lorem Ipsum is simply dummy text PageMaker including
@@ -314,7 +451,7 @@
 											PageMaker including versions of Lorem Ipsum Lorem Ipsum is
 										</p>
 									</div>
-									<div class="col-4">
+									<div class="col-12 col-md-4 mt-5 mt-md-0">
 										<h5 class="text-white">CONTACT</h5>
 										<a
 											class="text-white text-decoration-none fw600"
@@ -327,7 +464,7 @@
 											>Gmail : info@gomaid.com</a
 										>
 									</div>
-									<div class="col-4 align-self-end">
+									<div class="col-12 col-md-4 align-self-end mt-5 mt-md-0">
 										<img
 											class="px-1"
 											src="./assets/images/share/i1.svg"
@@ -357,5 +494,20 @@
 			</div>
 			<!-- ======== FOOTER END ======== -->
 		</div>
+
+		<!-- SCRIPT -->
+		<script>
+			function w3_open() {
+				document.getElementById("mySidebar").style.display = "block";
+				document.getElementById("hamb").style.display = "none";
+				document.getElementById("cross").style.display = "block";
+			}
+
+			function w3_close() {
+				document.getElementById("mySidebar").style.display = "none";
+				document.getElementById("cross").style.display = "none";
+				document.getElementById("hamb").style.display = "block";
+			}
+		</script>
 	</body>
 </html>
