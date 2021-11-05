@@ -7,6 +7,20 @@
 
 		<!-- == EXTERNAL LINKS START == -->
 		<link
+			rel="icon"
+			href="https://gomaid.ca/wp-content/uploads/2021/09/cropped-GoMaid_Leaf_Small-32x32.png"
+			sizes="32x32"
+		/>
+		<link
+			rel="icon"
+			href="https://gomaid.ca/wp-content/uploads/2021/09/cropped-GoMaid_Leaf_Small-192x192.png"
+			sizes="192x192"
+		/>
+		<link
+			rel="apple-touch-icon"
+			href="https://gomaid.ca/wp-content/uploads/2021/09/cropped-GoMaid_Leaf_Small-180x180.png"
+		/>
+		<link
 			href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
 			rel="stylesheet"
 			integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
@@ -165,7 +179,7 @@
 								class="display-5 mt-1 fw400"
 							>
 								BECAUSE YOU DESERVE
-								<span class="bottom_line fw700">PROFESSIONAL</span>
+								<span id="heroText" class="bottom_line fw700"></span>
 							</h1>
 							<button
 								data-aos="fade-up"
@@ -333,8 +347,60 @@
 										"
 										data-aos="zoom-in-right"
 									>
-										<img src="./assets/images/about_below/ic2.png" alt="" />
+										<img
+											class="im"
+											src="./assets/images/about_below/ic2.png"
+											alt=""
+										/>
 										<h2 class="text-white mt-2 mb-0 fw700">RESIDENTIAL</h2>
+
+										<div class="about text-dark">
+											<div class="about_inner">
+												<h6>YOU DESERVE A CLEAN HOME.</h6>
+
+												<ul class="list-unstyled">
+													<li>
+														<img src="./assets/images/leaf.png" alt="" />
+														Routine Cleaning
+													</li>
+													<li>
+														<img src="./assets/images/leaf.png" alt="" /> Deep
+														Clean
+													</li>
+													<li>
+														<img src="./assets/images/leaf.png" alt="" />
+														Professional Carpet Clean
+													</li>
+													<li>
+														<img src="./assets/images/leaf.png" alt="" /> Move
+														In/Out Clean
+													</li>
+													<li>
+														<img src="./assets/images/leaf.png" alt="" />
+														COVID-19 Disinfection/Sanitization
+													</li>
+													<li>
+														<img src="./assets/images/leaf.png" alt="" /> Airbnb
+													</li>
+												</ul>
+
+												<div class="d-flex justify-content-end">
+													<button
+														class="
+															border-0
+															px-4
+															py-1
+															rounded-pill
+															fw700
+															bg-white
+															color1
+														"
+													>
+														Booking Cleaning
+													</button>
+												</div>
+											</div>
+										</div>
 									</div>
 									<div
 										class="
@@ -346,8 +412,59 @@
 										"
 										data-aos="zoom-in-left"
 									>
-										<img src="./assets/images/about_below/ic1.svg" alt="" />
+										<img
+											class="im"
+											src="./assets/images/about_below/ic1.svg"
+											alt=""
+										/>
 										<h2 class="text-white mt-2 mb-0 fw700">COMMERCIAL</h2>
+
+										<div class="about text-dark">
+											<div class="about_inner">
+												<h6>
+													LET US DO THE CLEANING, SO YOU CAN DO THE BUSINESS.
+												</h6>
+
+												<ul class="list-unstyled">
+													<li>
+														<img src="./assets/images/leaf.png" alt="" />
+														Professional Carpet Clean
+													</li>
+													<li>
+														<img src="./assets/images/leaf.png" alt="" /> Post
+														Construction Clean
+													</li>
+													<li>
+														<img src="./assets/images/leaf.png" alt="" /> Office
+														Cleaning
+													</li>
+													<li>
+														<img src="./assets/images/leaf.png" alt="" /> Floor
+														Cleaning/Waxing
+													</li>
+													<li>
+														<img src="./assets/images/leaf.png" alt="" />
+														COVID-19 Disinfection/Sanitization
+													</li>
+												</ul>
+
+												<div class="d-flex justify-content-end pe-4">
+													<button
+														class="
+															border-0
+															px-4
+															py-1
+															rounded-pill
+															fw700
+															bg-white
+															color1
+														"
+													>
+														Contact us Now
+													</button>
+												</div>
+											</div>
+										</div>
 									</div>
 								</div>
 							</div>
@@ -613,8 +730,27 @@
 		</div>
 
 		<!-- SCRIPT -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+		<script src="https://unpkg.com/typeit@8.0.1/dist/index.umd.js"></script>
 		<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 		<script>
+			$(document).ready(function () {
+				new TypeIt("#heroText", {
+					waitUntilVisible: true,
+					speed: 120,
+					loop: true,
+				})
+					.type("PROFESSIONAL", { delay: 1000 })
+					.delete(12)
+					.type("CONVENIENT", { delay: 1000 })
+					.delete(10)
+					.type("AFFORDABLE", { delay: 1000 })
+					.delete(10)
+					.type("CLEAN", { delay: 1000 })
+					.delete(5)
+					.go();
+			});
+
 			AOS.init({
 				once: true,
 			});

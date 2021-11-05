@@ -356,16 +356,22 @@ html {
 		background-size: cover;
 		background-position: center;
 		position: relative;
+		transition: 0.6s;
+
+		.about {
+			display: none;
+		}
 
 		&::before {
 			content: "";
 			position: absolute;
 			height: 100%;
 			width: 100%;
+			transition: 0.6s;
 			background-color: #ace00093;
 		}
 
-		img {
+		img.im {
 			max-width: 120px;
 			width: 100%;
 			z-index: 1;
@@ -384,16 +390,22 @@ html {
 		background-size: cover;
 		background-position: center;
 		position: relative;
+		transition: 0.6s;
+
+		.about {
+			display: none;
+		}
 
 		&::before {
 			content: "";
 			position: absolute;
 			height: 100%;
 			width: 100%;
+			transition: 0.6s;
 			background-color: #ace00093;
 		}
 
-		img {
+		img.im {
 			max-width: 120px;
 			z-index: 1;
 			width: 100%;
@@ -401,6 +413,117 @@ html {
 
 		h2 {
 			z-index: 1;
+		}
+	}
+
+	// HOVER
+	.about1:hover {
+		background-image: url("../images/about_below/i1.svg");
+		height: 300px;
+		width: 100%;
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-position: center;
+		position: relative;
+
+		.about {
+			display: block;
+			z-index: 2;
+
+			.about_inner {
+				padding-left: 6rem;
+
+				h6 {
+					font-weight: bold;
+				}
+			}
+		}
+
+		&::before {
+			content: "";
+			position: absolute;
+			height: 100%;
+			width: 100%;
+			background: linear-gradient(
+				90deg,
+				rgba(172, 224, 0, 0.4) 30%,
+				rgba(172, 224, 0, 1) 30%
+			);
+		}
+
+		img.im {
+			max-width: 120px;
+			width: 100%;
+			z-index: -1;
+			display: none;
+		}
+
+		h2 {
+			display: none;
+			z-index: -1;
+		}
+
+		ul {
+			padding-left: 1rem;
+
+			li {
+				font-weight: 600;
+			}
+		}
+	}
+
+	.about2:hover {
+		background-image: url("../images/about_below/i2.svg");
+		height: 300px;
+		width: 100%;
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-position: center;
+		position: relative;
+
+		.about {
+			display: block;
+			z-index: 2;
+
+			.about_inner {
+				padding-left: 12.5rem;
+
+				h6 {
+					font-weight: bold;
+				}
+			}
+		}
+
+		&::before {
+			content: "";
+			position: absolute;
+			height: 100%;
+			width: 100%;
+			background: linear-gradient(
+				90deg,
+				rgba(172, 224, 0, 0.4) 30%,
+				rgba(172, 224, 0, 1) 30%
+			);
+		}
+
+		img.im {
+			max-width: 120px;
+			width: 100%;
+			z-index: -1;
+			display: none;
+		}
+
+		h2 {
+			z-index: -1;
+			display: none;
+		}
+
+		ul {
+			padding-left: 1rem;
+
+			li {
+				font-weight: 600;
+			}
 		}
 	}
 }
@@ -621,6 +744,12 @@ html {
 
 // MEDIA START
 @media screen and (max-width: 998px) {
+	.about_below_container .about1:hover .about .about_inner {
+		padding-left: 8rem;
+	}
+	.about_below_container .about2:hover .about .about_inner {
+		padding-left: 10.5rem;
+	}
 }
 
 @media screen and (max-width: 768px) {
@@ -643,8 +772,121 @@ html {
 		margin-top: 5rem;
 		margin-bottom: 0rem;
 	}
+	.about_below_container .about2:hover .about .about_inner {
+		padding-left: 13.5rem;
+	}
 }
 
 @media screen and (max-width: 575px) {
+	.about_below_container {
+		.about1:hover {
+			background-image: url("../images/about_below/i1.svg");
+			height: 300px;
+			width: 100%;
+			background-repeat: no-repeat;
+			background-size: cover;
+			background-position: center;
+			position: relative;
+
+			.about {
+				display: block;
+				z-index: 2;
+
+				.about_inner {
+					padding-left: 0rem;
+
+					h6 {
+						font-weight: bold;
+					}
+				}
+			}
+
+			&::before {
+				content: "";
+				position: absolute;
+				height: 100%;
+				width: 100%;
+				background: linear-gradient(
+					90deg,
+					rgba(172, 224, 0, 1) 30%,
+					rgba(172, 224, 0, 1) 30%
+				);
+			}
+
+			img.im {
+				max-width: 120px;
+				width: 100%;
+				z-index: -1;
+				display: none;
+			}
+
+			h2 {
+				display: none;
+				z-index: -1;
+			}
+
+			ul {
+				padding-left: 1rem;
+
+				li {
+					font-weight: 600;
+				}
+			}
+		}
+		.about2:hover {
+			background-image: url("../images/about_below/i1.svg");
+			height: 300px;
+			width: 100%;
+			background-repeat: no-repeat;
+			background-size: cover;
+			background-position: center;
+			position: relative;
+
+			.about {
+				display: block;
+				z-index: 2;
+
+				.about_inner {
+					padding-left: 1rem;
+
+					h6 {
+						font-weight: bold;
+					}
+				}
+			}
+
+			&::before {
+				content: "";
+				position: absolute;
+				height: 100%;
+				width: 100%;
+				background: linear-gradient(
+					90deg,
+					rgba(172, 224, 0, 1) 30%,
+					rgba(172, 224, 0, 1) 30%
+				);
+			}
+
+			img.im {
+				max-width: 120px;
+				width: 100%;
+				z-index: -1;
+				display: none;
+			}
+
+			h2 {
+				display: none;
+				z-index: -1;
+			}
+
+			ul {
+				padding-left: 1rem;
+
+				li {
+					font-weight: 600;
+				}
+			}
+		}
+	}
 }
 // MEDIA END
